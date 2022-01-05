@@ -1,0 +1,201 @@
+@import "../_vars.scss";
+
+nav {
+	height: 8vh;
+	width: 100%;
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 10;
+	transition: 0.2s all !important;
+	background-color: #ffffff00;
+	&.scrolled {
+		height: 6.7vh;
+
+		background-color: #fff;
+		> ul > a,
+		> a {
+			color: $theme-color;
+			&:hover {
+				border-bottom-color: currentColor;
+			}
+		}
+	}
+	> ul {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	> ul > a,
+	> a {
+		color: $font-color;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 1.7vh;
+		transition: 0.2s all;
+		padding: 1vh 0;
+		margin: 0 2vh;
+		white-space: nowrap;
+		border-top: 0.3vh solid transparent;
+		border-bottom: 0.3vh solid transparent;
+		&:hover {
+			color: $theme-color;
+		}
+		&.active {
+			padding: 1vh 2vh;
+			margin: 0;
+			background: $theme-color;
+			color: $font-color;
+			border-radius: 2vh;
+			border-color: transparent !important;
+		}
+	}
+	> a {
+		padding: 0vh !important;
+		&.active {
+			padding: 1vh !important;
+			margin: 1vh !important;
+		}
+	}
+
+	> div {
+		margin-right: 7vh;
+
+		> a {
+			position: relative;
+			display: flex;
+			height: 8vh;
+			width: 8vh;
+			z-index: 2;
+			background: url("/img/logo.png") 0.7vh 0.5vh / contain no-repeat;
+		}
+		&::before {
+			position: absolute;
+			content: "";
+			height: 12vh;
+			width: 12vh;
+			background: url("/img/1.png") -3vh -2.3vh / cover no-repeat;
+			z-index: -1;
+		}
+	}
+}
+
+@media screen and (max-width: 1100px) and (min-height: 1080px) and (max-height: 1200px) {
+	nav {
+		> div {
+			margin-right: 0vh;
+		}
+
+		> ul > a,
+		> a {
+			font-size: 1.5vh;
+			margin: 0 0.5vh;
+			&.active {
+				padding: 1vh 1vh;
+			}
+		}
+		> a {
+			width: auto;
+			margin: 0 !important;
+		}
+	}
+}
+@media screen and (max-width: 768px),
+	screen and (width: 1024px) and (max-height: 1366px),
+	screen and (width: 810px) and (max-height: 1080px) {
+	$navH: 10vw;
+	nav {
+		height: $navH;
+
+		&.scrolled {
+			background-color: #fff;
+			height: $navH;
+
+			> ul > a {
+				color: $font-color;
+				&:hover {
+					border-color: none;
+				}
+			}
+		}
+		> ul {
+			position: fixed;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: #121212;
+			height: $navH;
+			justify-content: space-evenly;
+			align-items: center;
+		}
+		> ul > a,
+		> a {
+			font-size: 2.7vw;
+			padding: 1vw 0;
+			margin: 0 2vw;
+
+			&.active {
+				padding: 1vw 2.5vw !important;
+			}
+		}
+
+		> a,
+		> div {
+			width: initial;
+			margin-right: 4vw;
+		}
+		> a {
+			margin-right: 3vw !important;
+			color: $theme-color;
+		}
+		> div {
+			> a {
+				height: 14vw;
+				width: 14vw;
+				background-position: 1vw 2vw;
+			}
+			&::before {
+				height: 20vw;
+				width: 20vw;
+				background-position: -5vw -2vw;
+			}
+		}
+	}
+}
+
+@media screen and (width: 1024px) and (max-height: 1366px),
+	screen and (width: 810px) and (max-height: 1080px),
+	screen and (width: 768px) and (max-height: 1024px) {
+	$navH: 8vw;
+	nav {
+		&.scrolled {
+			height: $navH;
+		}
+		height: $navH;
+		> ul {
+			height: $navH;
+		}
+		> ul > a,
+		a {
+			font-size: 2vw;
+		}
+
+		> a,
+		> div {
+			margin-right: 2vw !important;
+		}
+		> div {
+			> a {
+				height: 10vw;
+				width: 10vw;
+				background-position: 1vw 2vw;
+			}
+			&::before {
+				height: 16vw;
+				width: 16vw;
+				background-position: -5vw -2vw;
+			}
+		}
+	}
+}

@@ -1,0 +1,87 @@
+@import "../_vars.scss";
+
+.cardlist {
+	display: flex;
+	flex-direction: column;
+	> section {
+		display: flex;
+		justify-content: space-evenly;
+		margin-top: 1vh;
+		> article {
+			background: $card-bg;
+			display: flex;
+			flex-direction: column;
+			width: 48vh;
+			border-radius: 1vh;
+			box-shadow: 0 0.7vh 1vh 0.5vh #00000042;
+			overflow: hidden;
+			margin: 0 1vh;
+			position: relative;
+
+			> img {
+				width: 100%;
+				height: 37vh;
+				object-fit: cover;
+			}
+			&::after {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: #00000030;
+				z-index: 1;
+			}
+			> div {
+				> h3,
+				> p {
+					padding: 2vh 0;
+					display: flex;
+					align-items: center;
+					justify-content: space-evenly;
+					text-align: center;
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					color: #fff;
+					font-size: 1.8vw;
+					z-index: 2;
+				}
+				> p {
+					font-size: 1.8vh;
+					top: initial;
+					bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.cardlist {
+		> section {
+			flex-direction: column;
+			> article {
+				width: 90vw;
+				margin: 0 auto 6vw;
+				&:last-child {
+					margin-bottom: 3vw;
+				}
+				> img {
+					height: 60vw;
+				}
+				div {
+					> h3 {
+						font-size: 6.5vw;
+					}
+					> p {
+						font-size: 3.5vw;
+						padding: 4vw 0;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,77 @@
+@import "../_vars.scss";
+
+.careerlist {
+	display: flex;
+	flex-direction: column;
+	position: initial;
+	margin-top: 2vh;
+	width: 100%;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 80%;
+	margin: 2vh auto 0;
+
+	> div {
+		> section > div {
+			display: flex;
+			align-items: center;
+			> a {
+				opacity: 0;
+				pointer-events: none;
+				cursor: pointer;
+				color: $font-color;
+				font-size: 1.7vh;
+				font-family: "Readex Pro";
+				padding: 0.8vh 1.5vh;
+				margin-left: 2vh;
+				border-radius: 1vh;
+				color: $theme-color;
+				border: 0.1vh solid currentColor;
+				background: $font-color;
+				z-index: 3;
+				transition: 0.3s all;
+				transform: translateY(-5vh);
+				text-decoration: none;
+			}
+		}
+		&.open > section > div {
+			align-items: center;
+			> a {
+				transform: none;
+				opacity: 1;
+				pointer-events: auto;
+				&:hover {
+					transform: scale(1.05);
+					box-shadow: 0 0.2vh 0.8vh #00000042;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px),
+	screen and (width: 1024px) and (max-height: 1366px),
+	screen and (width: 810px) and (max-height: 1080px) {
+	.careerlist {
+		margin-top: 0;
+		> div > div > section > div > a {
+			font-size: 3vw;
+			padding: 1.5vw 3vw;
+			margin-left: 3vw;
+			border-radius: 2vw;
+			border-width: 0.2vw;
+			transform: translateY(-10vw);
+		}
+	}
+}
+
+@media screen and (width: 1024px) and (max-height: 1366px),
+	screen and (width: 810px) and (max-height: 1080px),
+	screen and (width: 768px) and (max-height: 1024px) {
+	.careerlist > div > div > section > div > a {
+		font-size: 2.7vw;
+		padding: 1vw 2vw;
+		border-radius: 1vw;
+		border-width: 0.1vw;
+	}
+}

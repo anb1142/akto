@@ -1,0 +1,26 @@
+{
+	"name": "akto",
+	"version": "2.0.0",
+	"license": "GPL-3.0",
+	"homepage": "http://anb1142.github.io/akto",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"serve": "vite preview",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d dist"
+	},
+	"dependencies": {
+		"body-scroll-lock": "^4.0.0-beta.0",
+		"react": "^17.0.0",
+		"react-dom": "^17.0.0",
+		"react-icons": "^4.3.1",
+		"react-router-dom": "^6.0.2"
+	},
+	"devDependencies": {
+		"@vitejs/plugin-react": "^1.0.0",
+		"gh-pages": "^3.2.3",
+		"sass": "^1.44.0",
+		"vite": "^2.6.4"
+	}
+}

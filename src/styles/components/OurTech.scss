@@ -1,0 +1,83 @@
+@import "../_vars.scss";
+
+.tech {
+	display: flex;
+	flex-direction: column;
+	> header {
+		color: $font-color2;
+		margin: 4vh 0;
+	}
+	> section {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		background: #fff;
+		width: 90%;
+		padding: 5vh 2vh;
+		border-radius: 2vh;
+		align-self: center;
+		justify-self: center;
+		> a {
+			$h: 10vh;
+			$w: 22vh;
+			height: $h;
+			width: $w;
+			margin: 2vh 1vh;
+			> img {
+				height: $h;
+				width: $w;
+				object-fit: contain;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.tech {
+		> header {
+			margin: 4vw 0;
+		}
+		> section {
+			padding: 5vw 2vw;
+			> a {
+				$h: 20vw;
+				$w: 60vw;
+				height: $h;
+				width: $w;
+				margin: 5vw 0;
+				> img {
+					height: $h;
+					width: $w;
+				}
+				&:last-of-type {
+					margin-top: 8vw;
+				}
+			}
+		}
+	}
+}
+@media screen and (width: 1024px) and (max-height: 1366px),
+	screen and (width: 810px) and (max-height: 1080px) {
+	.tech {
+		> header {
+			margin: 4vw 0;
+		}
+		> section {
+			width: 95%;
+			padding: 3vw 2vw;
+			border-radius: 2vw;
+			> a {
+				$h: 9vw;
+				$w: 22vw;
+				height: $h;
+				width: $w;
+				margin: 2vw 1vw;
+
+				> img {
+					height: $h;
+					width: $w;
+				}
+			}
+		}
+	}
+}

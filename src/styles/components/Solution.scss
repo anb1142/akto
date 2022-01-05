@@ -1,0 +1,114 @@
+@import "../_vars.scss";
+.solution {
+	display: flex;
+	margin: 0 auto;
+	width: 99%;
+	justify-content: center;
+	flex-wrap: wrap;
+
+	> a {
+		text-decoration: none;
+		display: flex;
+		height: 30vh;
+		width: 50vh;
+		flex-direction: column;
+		justify-content: space-evenly;
+		background: $card-bg;
+		border-radius: 1vh;
+		padding: 2vh 0;
+		box-shadow: 0 0.7vh 1vh #00000042;
+		transition: 0.2s all;
+		border-bottom: 0.5vh solid #aaa;
+		margin: 1vh;
+		cursor: pointer;
+		&:first-of-type {
+			margin-left: 0;
+		}
+		&:last-of-type {
+			margin-right: 0;
+		}
+		&:hover {
+			box-shadow: 0 1vh 1vh 0.3vh #00000042;
+			transform: scale(1.02) translateY(-0.3vh);
+		}
+		> h3 {
+			font-size: 3vh;
+			text-align: center;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: $theme-color;
+			cursor: pointer;
+			> svg {
+				margin-right: 1vh;
+			}
+		}
+		> p {
+			font-size: 2.4vh;
+			line-height: 1.6;
+			letter-spacing: 0.1vh;
+			color: $font-color2;
+			text-align: center;
+			padding: 0 3vh;
+			cursor: pointer;
+			font-family: "source sans Pro", sans-serif;
+		}
+	}
+}
+@media screen and (max-width: 768px) {
+	.solution {
+		width: 90%;
+
+		> a {
+			height: 55vw;
+			width: 100%;
+			border-radius: 2vw;
+			padding: 4vw 0;
+			border-width: 1vw;
+			margin: 2vw 0;
+
+			> h3 {
+				font-size: 7vw;
+				padding: 3vw 0;
+				> svg {
+					margin-right: 1vw;
+				}
+			}
+			> p {
+				font-size: 5vw;
+				letter-spacing: 0.2vw;
+				padding: 0 2vw;
+			}
+		}
+	}
+}
+
+@media screen and (width: 1024px) and (max-height: 1366px),
+	screen and (width: 810px) and (max-height: 1080px),
+	screen and (width: 768px) and (max-height: 1024px) {
+	.solution {
+		width: 100%;
+		> a {
+			height: auto;
+			width: 45vw;
+			border-radius: 2vw;
+			padding: 1vw 0;
+			border-width: 1vw;
+			margin: 1vw;
+			border-bottom: 0.5vw solid #aaa;
+
+			> h3 {
+				font-size: 3.2vw;
+				padding: 1vw 0;
+				> svg {
+					margin-right: 1vw;
+				}
+			}
+			> p {
+				font-size: 2.7vw;
+				letter-spacing: 0.2vw;
+				padding: 0 2vw;
+			}
+		}
+	}
+}

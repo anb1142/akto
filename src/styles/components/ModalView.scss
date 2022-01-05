@@ -1,0 +1,54 @@
+@import "../_vars.scss";
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: #00000000;
+	z-index: 10;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+
+	transform: translateY(1000vh);
+	transition: 0.5s transform;
+
+	> div {
+		position: relative;
+		> button {
+			position: absolute;
+			color: $font-color2;
+			font-size: 3vh;
+			text-decoration: none;
+			top: 0;
+			right: 0;
+			padding: 0 1vh;
+			background: none;
+			opacity: 0.8;
+			cursor: pointer;
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+	&.open {
+		transform: none;
+		background: #00000042;
+
+		> div {
+			animation: modalshow 0.7s;
+		}
+	}
+}
+@keyframes modalshow {
+	0% {
+		transform: translateY(-100vh) scale(0.5);
+	}
+	50% {
+		transform: translateY(5vh) scale(1);
+	}
+	100% {
+		transform: none;
+	}
+}

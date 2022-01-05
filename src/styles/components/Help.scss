@@ -1,0 +1,81 @@
+@import "../_vars.scss";
+aside {
+	width: 100%;
+	padding: 3vh 0;
+	> p {
+		text-align: center;
+		font-size: 4vh;
+		color: $font-color3;
+		font-family: "source sans Pro", sans-serif;
+	}
+	> div {
+		display: flex;
+		justify-content: center;
+
+		> a {
+			margin-top: 2vh;
+			color: $font-color;
+			padding: 1vh;
+			text-decoration: none;
+			background: $theme-color;
+			border-radius: 1vh;
+			border-bottom: $theme-color2 solid 0.4vh;
+			width: 13vh;
+			font-size: 1.7vh;
+			text-align: center;
+			transition: transform 0.2s;
+			box-shadow: 0 0.2vh 0.7vh #00000042;
+			&:first-child {
+				margin-right: 1vh;
+			}
+			&:hover {
+				transform: scale(1.02) translateY(-0.2vh);
+			}
+			&:active {
+				transform: scale(0.98);
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	aside {
+		padding: 5vw 0;
+		> p {
+			font-size: 8vw;
+		}
+		> div {
+			> a {
+				margin-top: 2vw;
+				padding: 2vw;
+				border-bottom-width: 0.8vw;
+				width: 27vw;
+				font-size: 3.4vw;
+				&:first-child {
+					margin-right: 2vw;
+				}
+			}
+		}
+	}
+}
+@media screen and (width: 1024px) and (max-height: 1366px),
+	screen and (width: 810px) and (max-height: 1080px),
+	screen and (width: 768px) and (max-height: 1024px) {
+	aside {
+		> p {
+			font-size: 3vh;
+		}
+		> div {
+			> a {
+				margin-top: 1vh;
+				padding: 1vh;
+				border-bottom-width: 0.5vh;
+				width: 12vh;
+				font-size: 1.4vh;
+				&:first-child {
+					margin-right: 2vh;
+				}
+			}
+		}
+	}
+}
