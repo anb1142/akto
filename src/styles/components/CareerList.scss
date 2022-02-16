@@ -15,7 +15,7 @@
 		> section > div {
 			display: flex;
 			align-items: center;
-			> a {
+			> button {
 				opacity: 0;
 				pointer-events: none;
 				cursor: pointer;
@@ -36,7 +36,7 @@
 		}
 		&.open > section > div {
 			align-items: center;
-			> a {
+			> button {
 				transform: none;
 				opacity: 1;
 				pointer-events: auto;
